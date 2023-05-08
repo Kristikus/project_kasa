@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    margin-left: 25px;
+    text-decoration: none;
+    composes: primary from './colors.css';
+}

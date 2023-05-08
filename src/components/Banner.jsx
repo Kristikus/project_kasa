@@ -1,12 +1,12 @@
-import imgHome from '../assets/img-home.png'
+import styles from '../styles/Banner.module.css'
 
-
-function Banner() {
-  return (
-    <div>
-      <img src={imgHome} alt='' />
-    </div>
-  )
+function Banner({ children, src, alt }) {
+    return (
+        <div className={styles.container}>
+            <img className={styles.img} src={src} alt={alt} />
+            {children}
+        </div>
+    )
 }
 
 export default Banner
