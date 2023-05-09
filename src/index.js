@@ -37,10 +37,10 @@ const Root = () => {
     return (
         <>
             <Header />
-            <Footer />
             <div>
                 <Outlet />
             </div>
+            <Footer />
         </>
     )
 }
