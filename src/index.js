@@ -6,6 +6,7 @@ import Housing from './pages/Housing'
 import About from './pages/About'
 import Error from './components/Error'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import {
     createBrowserRouter,
     RouterProvider,
@@ -26,9 +27,9 @@ function App() {
         )
     )
     return (
-        <div>
+        <>
             <RouterProvider router={router} />
-        </div>
+        </>
     )
 }
 
@@ -36,6 +37,7 @@ const Root = () => {
     return (
         <>
             <Header />
+            <Footer />
             <div>
                 <Outlet />
             </div>

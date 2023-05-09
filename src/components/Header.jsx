@@ -5,13 +5,13 @@ import styles from '../styles/Header.module.css'
 
 function Header() {
     return (
-        <div className={styles.container}>
-            <img src={logo} alt="logo" />
+        <header className={styles.container}>
+            <img className={logo} src={logo} alt="logo" />
             <nav>
                 <Link className={styles.link} to="/">Accueil</Link>
                 <Link className={styles.link} to="/about">A propos</Link>
             </nav>
-        </div>
+        </header>
 
     )
 }
