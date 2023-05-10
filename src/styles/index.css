@@ -4,6 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 30px 60px;
+:root {
+    margin: 30px 60px 0 60px;
 }
