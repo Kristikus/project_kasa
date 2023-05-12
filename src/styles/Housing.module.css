@@ -42,4 +42,15 @@ p, div, h1 {
 }
 
 
+.star,
+.starGrey {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.starGrey {
+    color: #E3E3E3;    
+}
+
+
 
