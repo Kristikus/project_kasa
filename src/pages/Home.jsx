@@ -4,6 +4,8 @@ import logements from '../logements.json'
 import imgHome from '../assets/img-home.png'
 import styledBanner from '../styles/Banner.module.css'
 import styledCard from '../styles/Card.module.css'
+import { Link } from 'react-router-dom'
+
 
 function Home() {
     return (
@@ -15,11 +17,13 @@ function Home() {
             </Banner>
             <div className={styledCard.container}>
                 {logements.map((logement) => (
-                    <Card
+                    <Link
+                        to={`/logement/${logement.id}`}
+                        className={styledCard.card}
                         key={logement.id}
-                        cover={logement.cover}
-                        title={logement.title}
-                    />
+                    >
+                        <Card cover={logement.cover} title={logement.title} />
+                    </Link>
                 ))}
             </div>
         </div>

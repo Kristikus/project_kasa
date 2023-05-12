@@ -20,8 +20,8 @@ function App() {
         createRoutesFromElements(
             <Route path="/" element={<Root />}>
                 <Route index element={<Home />} />
-                <Route path="/housing" element={<Housing />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/logement/:id" element={<Housing />} />
+                <Route path="/a-propos" element={<About />} />
                 <Route path="*" element={<Error />} />
             </Route>
         )
