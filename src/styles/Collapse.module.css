@@ -3,6 +3,13 @@
     margin: 35px auto;
 }
 
+.containerLogement {
+    display: flex;
+    flex-direction: column;
+    max-width: 580px;
+    width: 90%;
+}
+
 .titleContain {
     display: flex;
     justify-content: space-between;
@@ -23,6 +30,7 @@
     align-items: center;
 }
 
+
 .img {
     height: 10px;
     /* position: absolute; */
@@ -37,4 +45,5 @@
     padding: 20px;
     border-radius: 5px;
     composes: primary from './colors.css';
+    min-height: 150px;
 }

@@ -7,8 +7,12 @@ function Error() {
     return (
         <div className={styles.errorWrapper}>
             <h1 className={styles.errorTitle}>404</h1>
-            <p className={styles.errorText}>Oups ! La page que vous demandez n'existe pas.</p>
-            <Link className={style.errorLink} to='/' element={<Home />}>Retourner sur la page d'accueil</Link>
+            <p className={styles.errorText}>
+                Oups ! La page que vous demandez n'existe pas.
+            </p>
+            <Link className={style.errorLink} to="/" element={<Home />}>
+                Retourner sur la page d'accueil
+            </Link>
         </div>
     )
 }

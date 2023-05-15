@@ -35,7 +35,9 @@ function Carousel({ images }) {
                         alt="suivant"
                         onClick={nextClick}
                     />
-                    <span className={styles.counter}>{`${currentSlide+1} / ${images.length}`}</span>
+                    <span className={styles.counter}>{`${currentSlide + 1} / ${
+                        images.length
+                    }`}</span>
                 </div>
             ) : null}
         </div>

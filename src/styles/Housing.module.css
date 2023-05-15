@@ -1,12 +1,22 @@
-p, div, h1 {
+p, h1 {
     color: #FF6060;
+}
+
+.divContainer {
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 1240px;
 }
 
 .img {
@@ -14,7 +24,7 @@ p, div, h1 {
     height: 415px;
     object-fit: cover;
     border-radius: 25px;
-
+    margin-bottom: 30px;
 }
 
 .arrow{
@@ -35,22 +45,80 @@ p, div, h1 {
 .counter {
     position: absolute;
     right: 50%;
-    bottom: 10px;
+    bottom: 50px;
     color: white;
     font-size: 18px;
     font-weight: 500;
 }
 
+.title {
+    font-weight: 500;
+}
+
+.location {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.tags {
+    display: inline-block;
+    max-width: 180px;
+    min-width: 150px;
+    /* width: 100%; */
+    background-color: #FF6060;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 20px 10px 20px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.hostWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.hostContainer {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* max-width: 150px; */
+}
+
+.hostName {
+    max-width: 80px;
+    text-align: right;
+}
+
+.hostImg {
+    margin-left: 8px;
+    width: 64px;
+    border-radius: 50%;
+}
 
 .star,
 .starGrey {
     font-size: 24px;
-    margin-right: 10px;
+    margin-left: 10px;
+    color: #FF6060;
 }
 
 .starGrey {
     color: #E3E3E3;    
 }
 
+.collapseWrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    gap: 60px
+}
 
-
+.equipmentsList {
+    list-style: none;
+}

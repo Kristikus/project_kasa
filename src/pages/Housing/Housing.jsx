@@ -1,45 +1,85 @@
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import logements from '../../logements.json'
 import Carousel from './Carousel'
 import Rating from './Rating'
+import styles from '../../styles/Housing.module.css'
+import Collapse from '../../components/Collapse'
+import { useEffect } from 'react'
 
 function Housing() {
     const { id } = useParams()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const allowedID = logements
+            .filter((logement) => logement.id === id)
+            .map((logement) => logement.id)
+            .join(',')
+
+        if (id !== allowedID) {
+            navigate('/erreur')
+        }
+    })
 
     return (
         <>
             {logements
-                .filter((housing) => housing.id === id)
-                .map((filterHousing) => (
-                    <div key={filterHousing.id}>
+                .filter((logement) => logement.id === id)
+                .map((logement) => (
+                    <div key={logement.id} className={styles.divContainer}>
                         <Carousel
-                            // src={filterHousing.pictures[currentSlide]}
-                            // onClickPrev={prevClick}
-                            // onClickNext={nextClick}
-
-                            key={filterHousing.id}
-                            images={filterHousing.pictures}
+                            key={logement.id}
+                            images={logement.pictures}
                         ></Carousel>
-                        <div>
+                        <div className={styles.wrapper}>
                             <div>
-                                <h1>{filterHousing.title}</h1>
-                                <p>{filterHousing.location}</p>
-                                {filterHousing.tags.map((tag, index) => (
-                                    <span key={`${filterHousing.tag}-${index}`}>
+                                <h1 className={styles.title}>
+                                    {logement.title}
+                                </h1>
+                                <p className={styles.location}>
+                                    {logement.location}
+                                </p>
+                                {logement.tags.map((tag, index) => (
+                                    <span
+                                        key={`${logement.tag}-${index}`}
+                                        className={styles.tags}
+                                    >
                                         {tag}
                                     </span>
                                 ))}
                             </div>
-                            <div>
-                                <p>{filterHousing.host.name}</p>
-                                <img
-                                    src={filterHousing.host.picture}
-                                    alt={filterHousing.host.name}
-                                />
-                                <Rating
-                                    starRating={filterHousing.rating}
-                                ></Rating>
+                            <div className={styles.hostWrapper}>
+                                <div className={styles.hostContainer}>
+                                    <p className={styles.hostName}>
+                                        {logement.host.name}
+                                    </p>
+                                    <img
+                                        src={logement.host.picture}
+                                        alt={logement.host.name}
+                                        className={styles.hostImg}
+                                    />
+                                </div>
+                                <Rating starRating={logement.rating}></Rating>
                             </div>
+                        </div>
+                        <div className={styles.collapseWrapper}>
+                            <Collapse
+                                title="Description"
+                                description={logement.description}
+                            ></Collapse>
+                            <Collapse
+                                title="Equipements"
+                                description={logement.equipments.map(
+                                    (equipment, index) => (
+                                        <li
+                                            key={`${equipment} ${index}`}
+                                            className={styles.equipmentsList}
+                                        >
+                                            {equipment}
+                                        </li>
+                                    )
+                                )}
+                            ></Collapse>
                         </div>
                     </div>
                 ))}

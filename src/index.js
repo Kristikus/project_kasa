@@ -22,7 +22,7 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="/logement/:id" element={<Housing />} />
                 <Route path="/a-propos" element={<About />} />
-                <Route path="*" element={<Error />} />
+                <Route path="/*" element={<Error />} />
             </Route>
         )
     )
@@ -37,9 +37,9 @@ const Root = () => {
     return (
         <>
             <Header />
-            <div>
+            <>
                 <Outlet />
-            </div>
+            </>
             <Footer />
         </>
     )

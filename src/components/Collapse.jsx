@@ -5,32 +5,15 @@ import arrowDown from '../assets/arrow-down.png'
 
 function Collapse({ title, description }) {
     const [open, setOpen] = useState(false)
-
-    // return open ? (
-    //     <>
-    //         <div className={styles.container}>
-    //             <div
-    //                 className={styles.titleContain}
-    //                 onClick={() => setOpen(false)}
-    //             >
-    //                 <h2 className={styles.title}>{title}</h2>
-    //                 <img className={styles.img} src={arrowUp} alt="" />
-    //             </div>
-    //             <div className={styles.description}>{description}</div>
-    //         </div>
-    //     </>
-    // ) : (
-    //     <div className={styles.container}>
-    //         <div className={styles.titleContain} onClick={() => setOpen(true)}>
-    //             <h2 className={styles.title}>{title}</h2>
-    //             <img className={styles.img} src={arrowDown} alt="" />
-    //         </div>
-    //     </div>
-    // )
+    const collapse = title === 'Description' || title === 'Equipements'
 
     return (
         <>
-            <div className={styles.container}>
+            <div
+                className={
+                    collapse ? styles.containerLogement : styles.container
+                }
+            >
                 <div
                     className={styles.titleContain}
                     onClick={() => setOpen(!open)}
