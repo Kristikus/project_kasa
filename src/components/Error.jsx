@@ -5,12 +5,12 @@ import style from '../styles/Error.module.css'
 
 function Error() {
     return (
-        <div className={styles.errorWrapper}>
-            <h1 className={styles.errorTitle}>404</h1>
-            <p className={styles.errorText}>
+        <div className={styles.container}>
+            <h1 className={styles.title}>404</h1>
+            <p className={styles.text}>
                 Oups ! La page que vous demandez n'existe pas.
             </p>
-            <Link className={style.errorLink} to="/" element={<Home />}>
+            <Link className={style.link} to="/" element={<Home />}>
                 Retourner sur la page d'accueil
             </Link>
         </div>

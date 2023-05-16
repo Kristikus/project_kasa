@@ -9,24 +9,26 @@ function Collapse({ title, description }) {
 
     return (
         <>
-            <div
-                className={
-                    collapse ? styles.containerLogement : styles.container
-                }
-            >
+            <div className={collapse ? styles.containerLogement : styles.container}>
                 <div
-                    className={styles.titleContain}
+                    className={styles.titleContainer}
                     onClick={() => setOpen(!open)}
                 >
-                    <h2 className={styles.title}>{title}</h2>
+                    <p className={styles.title}>{title}</p>
                     {open ? (
                         <img className={styles.img} src={arrowUp} alt="" />
                     ) : (
                         <img className={styles.img} src={arrowDown} alt="" />
                     )}
                 </div>
+
                 {open && (
-                    <div className={styles.description}>{description}</div>
+                    <div className={
+                            collapse ? styles.description : [`${styles.description} ${styles.descriptionAbout}`]
+                        }
+                    >
+                        {description}
+                    </div>
                 )}
             </div>
         </>

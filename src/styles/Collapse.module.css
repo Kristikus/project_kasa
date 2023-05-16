@@ -1,6 +1,9 @@
+@import 'index.css';
+
 .container {
     max-width: 1023px;
     margin: 35px auto;
+    font-size: 24px;
 }
 
 .containerLogement {
@@ -8,20 +11,19 @@
     flex-direction: column;
     max-width: 580px;
     width: 90%;
+    font-size: 18px;
 }
 
-.titleContain {
+.titleContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: relative; */
 }
 
 .title {
-    background-color: #FF6060;
+    background-color: var(--primary);
     padding: 10px;
-    color: white;
-    font-size: 22px;
+    color: var(--secondary);
     font-weight: 500;
     border-radius: 5px;
     width: 100%;
@@ -30,20 +32,22 @@
     align-items: center;
 }
 
-
 .img {
     height: 10px;
-    /* position: absolute; */
-    /* right: 15px;
-    top: 18px */
     margin-left: -50px;
     margin-right: 20px;
 }
 
 .description {
-    background-color: #F7F7F7;
-    padding: 20px;
+    background-color: var(--container);
+    padding: 25px 20px;
+    line-height: 26px;
     border-radius: 5px;
-    composes: primary from './colors.css';
-    min-height: 150px;
+    color: var(--primary);
+    min-height: 100px;
+    height: 100%;
 }
+
+.descriptionAbout{
+    line-height: 34px;
+} 

@@ -20,8 +20,8 @@ function Carousel({ images }) {
 
     return (
         <div className={styles.container}>
-            <img className={styles.img} src={images[currentSlide]} alt="" />
-            {images.length > 1 ? (
+            <img className={styles.img} src={images[currentSlide]} alt="pièce du logement" />
+            {images.length > 1 && (
                 <div>
                     <img
                         className={`${styles.arrow} ${styles.prevArrow}`}
@@ -39,7 +39,7 @@ function Carousel({ images }) {
                         images.length
                     }`}</span>
                 </div>
-            ) : null}
+            )}
         </div>
     )
 }

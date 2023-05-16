@@ -6,4 +6,9 @@
 
 :root {
     margin: 30px 60px 0 60px;
+    --primary: #FF6060;
+    --secondary: #FFF;
+    --tertiary: #000;
+    --emptyStar: #E3E3E3;
+    --container: #F7F7F7;
 }

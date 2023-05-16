@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 function Home() {
     return (
         <div>
-            <Banner src={imgHome} alt={'Bannière'}>
+            <Banner src={imgHome}>
                 <h1 className={styledBanner.text}>
                     Chez vous, partout et ailleurs
                 </h1>
@@ -21,7 +21,7 @@ function Home() {
                         className={styledCard.card}
                         key={logement.id}
                     >
-                        <Card cover={logement.cover} title={logement.title} />
+                        <Card cover={logement.cover} title={logement.title} alt={logement.title} />
                     </Link>
                 ))}
             </div>

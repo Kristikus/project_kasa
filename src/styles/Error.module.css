@@ -1,22 +1,24 @@
-.errorWrapper {
-    composes: primary from './colors.css';
+@import 'index.css';
+
+.container {
+    color: var(--primary);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.errorTitle {
+.title {
     font-size: 288px;
     font-weight: 700;
 }
 
-.errorText {
+.text {
     font-size: 36px;
     font-weight: 500;
 }
 
-.errorLink {
+.link {
     font-size: 18px;
-    composes: primary from './colors.css';
+    color: var(--primary);
     margin: 40px 0;
 }

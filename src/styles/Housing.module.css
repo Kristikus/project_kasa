@@ -1,9 +1,11 @@
+@import 'index.css';
+
 p, h1 {
-    color: #FF6060;
+    color: var(--primary);
 }
 
 .divContainer {
-    margin: 0 auto;
+    margin: -35px auto 0;
     max-width: 1240px;
 }
 
@@ -46,13 +48,14 @@ p, h1 {
     position: absolute;
     right: 50%;
     bottom: 50px;
-    color: white;
+    color: var(--secondary);
     font-size: 18px;
     font-weight: 500;
 }
 
 .title {
     font-weight: 500;
+    font-size: 36px;
 }
 
 .location {
@@ -64,9 +67,8 @@ p, h1 {
     display: inline-block;
     max-width: 180px;
     min-width: 150px;
-    /* width: 100%; */
-    background-color: #FF6060;
-    color: white;
+    background-color: var(--primary);
+    color: var(--secondary);
     border-radius: 10px;
     padding: 5px 20px;
     margin: 20px 10px 20px 0;
@@ -84,9 +86,7 @@ p, h1 {
 
 .hostContainer {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    /* max-width: 150px; */
 }
 
 .hostName {
@@ -101,14 +101,14 @@ p, h1 {
 }
 
 .star,
-.starGrey {
+.starEmpty {
     font-size: 24px;
     margin-left: 10px;
-    color: #FF6060;
+    color: var(--primary);
 }
 
-.starGrey {
-    color: #E3E3E3;    
+.starEmpty {
+    color: var(--emptyStar);
 }
 
 .collapseWrapper {
