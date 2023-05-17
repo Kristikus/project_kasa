@@ -39,6 +39,7 @@ function Housing() {
                                 <p className={styles.location}>
                                     {logement.location}
                                 </p>
+                                <div>
                                 {logement.tags.map((tag, index) => (
                                     <span
                                         key={`${logement.tag}-${index}`}
@@ -47,6 +48,7 @@ function Housing() {
                                         {tag}
                                     </span>
                                 ))}
+                                </div>
                             </div>
                             <div className={styles.hostWrapper}>
                                 <div className={styles.hostContainer}>

@@ -9,8 +9,8 @@
 .containerLogement {
     display: flex;
     flex-direction: column;
-    max-width: 580px;
-    width: 90%;
+    max-width: 590px;
+    width: 92%;
     font-size: 18px;
 }
 
@@ -51,3 +51,25 @@
 .descriptionAbout{
     line-height: 34px;
 } 
+
+
+@media screen and (max-width: 768px) {
+    .containerLogement {
+        min-width: 100%;
+    }   
+}
+
+@media screen and (max-width: 480px) {
+    .description,
+    .descriptionAbout {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 11px 8px;
+    }
+
+    .title {
+        font-size : 15px;
+        height: 35px;
+    }
+
+}

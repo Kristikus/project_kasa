@@ -6,7 +6,7 @@ function Rating({ starRating }) {
     const starGrey = <i className={`${styles.starEmpty} fa-solid fa-star`}></i>
 
     return (
-        <div>
+        <div className={styles.starContainer}>
             {rating.map((rate) =>
                 starRating >= rate ? (
                     <span key={rate.toString()}>{star}</span>

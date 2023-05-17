@@ -19,3 +19,20 @@ footer p {
     color: var(--secondary);
     font-size: 24px;
 }
+
+
+@media screen and (max-width: 768px) {    
+    footer {
+        margin: 20px -20px 0 -20px;
+    } 
+    
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 303px) {    
+    footer {
+        margin: 10px -10px 0 -10px;
+    } 
+}

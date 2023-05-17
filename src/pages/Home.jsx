@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom'
 function Home() {
     return (
         <div>
-            <Banner src={imgHome}>
+            <Banner src={imgHome}
+                    containHome={styledBanner.containHome}
+                    imgHome={styledBanner.imgHome}>
                 <h1 className={styledBanner.text}>
                     Chez vous, partout et ailleurs
                 </h1>

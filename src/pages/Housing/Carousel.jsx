@@ -19,7 +19,7 @@ function Carousel({ images }) {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.carouselContainer}>
             <img className={styles.img} src={images[currentSlide]} alt="pièce du logement" />
             {images.length > 1 && (
                 <div>

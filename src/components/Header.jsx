@@ -1,18 +1,34 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/LOGO.svg'
 import styles from '../styles/Header.module.css'
 
 function Header() {
     return (
         <header className={styles.container}>
-            <img className={logo} src={logo} alt="logo Kasa" />
+            <Link to='/'>
+                <img className={styles.logo} src={logo} alt="logo Kasa" />
+            </Link>
             <nav>
-                <Link className={styles.link} to="/">
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                        isActive
+                            ? [`${styles.active} ${styles.link}`]
+                            : styles.link
+                    }
+                >
                     Accueil
-                </Link>
-                <Link className={styles.link} to="/a-propos">
+                </NavLink>
+                <NavLink
+                    to="/a-propos"
+                    className={({ isActive }) =>
+                        isActive
+                            ? [`${styles.link} ${styles.active}`]
+                            : styles.link
+                    }
+                >
                     A propos
-                </Link>
+                </NavLink>
             </nav>
         </header>
     )
