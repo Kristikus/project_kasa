@@ -1,9 +1,9 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import logements from '../../logements.json'
-import Carousel from './Carousel'
-import Rating from './Rating'
-import styles from '../../styles/Housing.module.css'
-import Collapse from '../../components/Collapse'
+import logements from '../logements.json'
+import Carousel from '../components/Carousel'
+import Rating from '../components/Rating'
+import styles from '../styles/Housing.module.css'
+import Collapse from '../components/Collapse'
 import { useEffect } from 'react'
 
 function Housing() {
@@ -40,14 +40,14 @@ function Housing() {
                                     {logement.location}
                                 </p>
                                 <div>
-                                {logement.tags.map((tag, index) => (
-                                    <span
-                                        key={`${logement.tag}-${index}`}
-                                        className={styles.tags}
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
+                                    {logement.tags.map((tag, index) => (
+                                        <span
+                                            key={`${logement.tag}-${index}`}
+                                            className={styles.tags}
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
                                 </div>
                             </div>
                             <div className={styles.hostWrapper}>

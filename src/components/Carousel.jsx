@@ -1,6 +1,6 @@
-import prevArrow from '../../assets/prevArrow.svg'
-import nextArrow from '../../assets/nextArrow.svg'
-import styles from '../../styles/Housing.module.css'
+import prevArrow from '../assets/prevArrow.svg'
+import nextArrow from '../assets/nextArrow.svg'
+import styles from '../styles/Housing.module.css'
 import { useState } from 'react'
 
 function Carousel({ images }) {
