@@ -9,8 +9,8 @@
 .containerLogement {
     display: flex;
     flex-direction: column;
-    max-width: 590px;
-    width: 92%;
+    max-width: 600px;
+    width: 60%;
     font-size: 18px;
 }
 

@@ -33,7 +33,7 @@ p, h1 {
     position: absolute;
     height: 30px;
     width: 30px;
-    top: 50%;
+    bottom: 50%;
 }
 
 .prevArrow {
@@ -119,8 +119,7 @@ p, h1 {
     display: flex;
     justify-content: space-between;
     max-width: 1240px;
-    /* margin: 0 auto; */
-    gap: 60px;
+    gap: 50px;
 }
 
 .equipmentsList {

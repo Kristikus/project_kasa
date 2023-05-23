@@ -9,7 +9,6 @@
     justify-content: center;
     flex-direction: row;
     grid-template-columns: repeat(3, 1fr);
-    flex-wrap: wrap;
     gap : 40px;
     max-width: 1240px;
 }
@@ -17,7 +16,6 @@
 .card {
     display: flex;
     align-items: flex-end;
-    z-index: 1;
     position: relative;
 }
 
@@ -26,16 +24,14 @@
     height: 340px;
     width: 100%;
     border-radius: 15px;
-    z-index: -1;
 }
 
 .title {
     position: absolute;
-    z-index: 2;
     margin: 15px;
     font-size: 18px;
     font-weight: 500;
-    width: 100px;
+    width: 125px;
     color: var(--secondary);
 }
 
