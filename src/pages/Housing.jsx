@@ -26,9 +26,8 @@ function Housing() {
             {logements
                 .filter((logement) => logement.id === id)
                 .map((logement) => (
-                    <div key={logement.id} className={styles.divContainer}>
+                    <main key={logement.id} className={styles.divContainer}>
                         <Carousel
-                            key={logement.id}
                             images={logement.pictures}
                         ></Carousel>
                         <div className={styles.wrapper}>
@@ -83,9 +82,10 @@ function Housing() {
                                 )}
                             ></Collapse>
                         </div>
-                    </div>
+                    </main>
                 ))}
         </>
     )
 }
+
 export default Housing

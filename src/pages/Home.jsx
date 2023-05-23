@@ -8,26 +8,27 @@ import { Link } from 'react-router-dom'
 
 function Home() {
     return (
-        <div>
+        <main>
             <Banner src={imgHome}
                     containHome={styledBanner.containHome}
-                    imgHome={styledBanner.imgHome}>
-                <h1 className={styledBanner.text}>
-                    Chez vous, partout et ailleurs
-                </h1>
+                    imageHome={styledBanner.imageHome}>
+                <h1 className={styledBanner.text}>Chez vous, partout et ailleurs</h1>
             </Banner>
             <div className={styledCard.container}>
                 {logements.map((logement) => (
                     <Link
                         to={`/logement/${logement.id}`}
                         className={styledCard.card}
-                        key={logement.id}
-                    >
-                        <Card cover={logement.cover} title={logement.title} alt={logement.title} />
+                        key={logement.id}>
+                        <Card 
+                            cover={logement.cover}
+                            title={logement.title}
+                            alt={logement.title}
+                        />
                     </Link>
                 ))}
             </div>
-        </div>
+        </main>
     )
 }
 

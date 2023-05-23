@@ -1,7 +1,7 @@
 import styles from '../styles/Error.module.css'
-import Home from '../pages/Home'
-import { Link } from 'react-router-dom'
 import style from '../styles/Error.module.css'
+import Home from './Home'
+import { Link } from 'react-router-dom'
 
 function Error() {
     return (

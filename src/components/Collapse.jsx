@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import styles from '../styles/Collapse.module.css'
-import arrowUp from '../assets/arrow-up.png'
-import arrowDown from '../assets/arrow-down.png'
+import arrowOpen from '../assets/arrow-open.png'
+import arrowClose from '../assets/arrow-close.png'
 
 function Collapse({ title, description }) {
-    const [open, setOpen] = useState(false)
+    const [toggle, setToggle] = useState(false)
     const collapse = title === 'Description' || title === 'Equipements'
 
     return (
@@ -12,17 +12,17 @@ function Collapse({ title, description }) {
             <div className={collapse ? styles.containerLogement : styles.container}>
                 <div
                     className={styles.titleContainer}
-                    onClick={() => setOpen(!open)}
+                    onClick={() => setToggle(!toggle)}
                 >
                     <p className={styles.title}>{title}</p>
-                    {open ? (
-                        <img className={styles.img} src={arrowUp} alt="" />
+                    {toggle ? (
+                        <img className={styles.img} src={arrowClose} alt="Fermer" />
                     ) : (
-                        <img className={styles.img} src={arrowDown} alt="" />
+                        <img className={styles.img} src={arrowOpen} alt="Ouvrir" />
                     )}
                 </div>
 
-                {open && (
+                {toggle && (
                     <div className={
                             collapse ? styles.description : [`${styles.description} ${styles.descriptionAbout}`]
                         }

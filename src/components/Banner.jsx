@@ -1,9 +1,9 @@
 import styles from '../styles/Banner.module.css'
 
-function Banner({ children, src, containHome, imgHome }) {
+function Banner({ children, src, containHome, imageHome }) {
     return (
         <div className={`${styles.container} ${containHome}`}>
-            <img className={`${styles.img} ${imgHome}`} src={src} alt='Bannière'  />
+            <img className={`${styles.img} ${imageHome}`} src={src} alt='Bannière'  />
             {children}
         </div>
     )
