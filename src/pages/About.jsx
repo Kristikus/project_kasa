@@ -2,12 +2,15 @@ import Banner from '../components/Banner'
 import bannerAbout from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png'
 import Collapse from '../components/Collapse'
 import infoAbout from '../infoAbout.json'
+import styledBanner from '../styles/Banner.module.css'
+
 
 function About() {
     return (
         <>
-            <Banner src={bannerAbout} />
-
+            <Banner src={bannerAbout} containHome={styledBanner.containHome}
+                    imageHome={styledBanner.imageHome}></Banner>
+            <div>
             {infoAbout.map((about) => (
                 <Collapse
                     key={about.id}
@@ -15,6 +18,7 @@ function About() {
                     description={about.description}
                 />
             ))}
+            </div>
         </>
     )
 }

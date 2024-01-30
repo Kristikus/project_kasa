@@ -5,7 +5,7 @@ import arrowClose from '../assets/arrow-close.png'
 
 function Collapse({ title, description }) {
     const [toggle, setToggle] = useState(false)
-    const collapse = title === 'Description' || title === 'Equipements'
+    const collapse = title === 'Description' || 'Equipements'
 
     return (
         <>

@@ -10,7 +10,6 @@ function Home() {
     return (
         <main>
             <Banner src={imgHome}
-                    containHome={styledBanner.containHome}
                     imageHome={styledBanner.imageHome}>
                 <h1 className={styledBanner.text}>Chez vous, partout et ailleurs</h1>
             </Banner>
