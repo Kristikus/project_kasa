@@ -32,8 +32,9 @@
 
 
 @media screen and (max-width: 768px) {
-    .imageHome {
+    .img {
         height: 110px;
+        border-radius: 15px;
     }
 
     .text {

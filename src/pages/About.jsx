@@ -4,20 +4,21 @@ import Collapse from '../components/Collapse'
 import infoAbout from '../infoAbout.json'
 import styledBanner from '../styles/Banner.module.css'
 
-
 function About() {
     return (
         <>
-            <Banner src={bannerAbout} containHome={styledBanner.containHome}
-                    imageHome={styledBanner.imageHome}></Banner>
+            <Banner
+                src={bannerAbout}
+                image={styledBanner.img}
+            ></Banner>
             <div>
-            {infoAbout.map((about) => (
-                <Collapse
-                    key={about.id}
-                    title={about.title}
-                    description={about.description}
-                />
-            ))}
+                {infoAbout.map((about) => (
+                    <Collapse
+                        key={about.id}
+                        title={about.title}
+                        description={about.description}
+                    />
+                ))}
             </div>
         </>
     )

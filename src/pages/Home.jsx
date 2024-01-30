@@ -10,7 +10,7 @@ function Home() {
     return (
         <main>
             <Banner src={imgHome}
-                    imageHome={styledBanner.imageHome}>
+                    image={styledBanner.img}>
                 <h1 className={styledBanner.text}>Chez vous, partout et ailleurs</h1>
             </Banner>
             <div className={styledCard.container}>
